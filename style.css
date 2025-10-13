@@ -1,0 +1,193 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    list-style: none;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    
+    background-image: linear-gradient(to right, red, green);
+    margin: 0;
+}
+
+nav ul{
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    
+}
+
+
+.blur_effect{
+    background-color: rgba(255, 255, 255, 0.205);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.info_obj{
+    width: 40px;
+    height: 40px;
+    background: red;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px black ;
+    cursor: pointer;
+    
+    
+}
+
+.info_obj i{
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+}
+
+.text{
+   font-family: arial;
+   color: white;
+   width: 110px;
+   line-height: 40px;
+   border-radius: 20px;
+   z-index: 1;
+   display: none;
+   
+   
+}
+
+.info_obj:hover{
+    width: 120px;
+    transition: ease-in 0.3s;
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+
+.info_obj:hover .text{
+    display: block;
+    
+    transition: ease 0.3s;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 700px;
+    max-width: 80%;
+}
+
+.modal.active{
+        transform: translate(-50%, -50%)scale(1);
+
+}
+
+
+.header_modal{
+    padding: 30px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.header_modal .title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header_modal .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 24px;
+    font-weight: bold
+}
+
+.modal_body{
+    padding: 30px 10px;
+    display: flex;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+img{
+    width: 50px;
+}
+
+.about_me{
+    width: 50%;
+    padding-right: 20px;
+}
+
+
+
+.languages{
+    display: flex;
+    gap: 50px;
+}
+
+.languages .lang{
+    flex-direction: column;
+    display: flex;
+    
+}
+.lang_know{
+    text-align: center;
+}
+.lang_know .title{
+    padding-bottom: 50px;
+    font-weight: bold;
+}
+
+.skills .title{
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.myinfo{
+    padding-bottom: 20px;
+}
+
+.skills ul li{
+    padding-bottom: 10px;
+}
