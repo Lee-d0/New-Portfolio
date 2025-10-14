@@ -9,16 +9,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body >
+    <div class="counter">
+        <div></div><p id="counts"></p>
+    </div>
+    
     <div class="blur_effect">
+        
+        
         <nav>
         <ul> 
-             <li class="info_obj" data-modal-target="#modal"><span><i class="fa-solid fa-user"></i></span><span class="text">About Me</span></li>
-             <li class="info_obj" data-modal-target="#modal1"><span><i class="fa-solid fa-briefcase"></i></span><span class="text">Projects</span></li>
-             <li class="info_obj" data-modal-target="#modal2"><span><i class="fa-solid fa-certificate"></i></span><span class="text">Certificate</span></li>
-        </ul>
+             <li class="info_obj" onclick=fun() data-modal-target="#modal"><span><i class="fa-solid fa-user"></i></span><span class="text">About Me</span></li>
+             <li class="info_obj" onclick=fun() data-modal-target="#modal1"><span><i class="fa-solid fa-briefcase"></i></span><span class="text">Projects</span></li>
+             <li class="info_obj" onclick=fun() data-modal-target="#modal2"><span><i class="fa-solid fa-certificate"></i></span><span class="text">Certificate</span></li>
+            <li class="info_obj" onclick=fun() data-modal-target="#modal3"><span><i class="fa-solid fa-envelope"></i></span><span class="text">Contact Me</span></li>
+        </ul> 
+
+
     </nav>
     </div>
-    <div class="modal" id="modal">
+    
+    <div class="modal" onclick=fun() id="modal">
         <div class="header_modal">
             <div class="title">
                 About Me
@@ -66,7 +76,7 @@
         </div>
     </div>
     <div id="overlay"></div>
-    <div class="modal" id="modal1">
+    <div class="modal" onclick=fun() id="modal1">
         <div class="header_modal">
             <div class="title">
                 My Projects
@@ -138,8 +148,8 @@
             </div>
         </div>
     </div>
-    <div id="overlay"></div>
-    <div class="modal" id="modal2">
+    <div id="overlay" onclick=fun()></div>
+    <div class="modal" onclick=fun() id="modal2">
         <div class="header_modal">
             <div class="title">
                 Certicates
@@ -149,11 +159,23 @@
 
         </div>
         <div class="modal_body">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla molestiae laudantium beatae? Sit natus blanditiis vel reprehenderit incidunt eveniet delectus totam itaque molestiae recusandae rem similique ipsam magni iure, ea expedita nulla at nisi provident. Facere nihil ut aperiam quo eos ducimus modi est, beatae dolorem tempore molestias eveniet neque quos, ea sequi soluta maxime ad cupiditate velit totam sit necessitatibus, distinctio rerum itaque! Nobis molestias ex accusamus architecto omnis, fugit necessitatibus nihil, saepe consequuntur, tempora consectetur aliquid at repudiandae.
-
+            <img class="Cer_img" src="Certicate.png" alt="">
         </div>
     </div>
-    <div id="overlay"></div>
+    <div class="modal" onclick=fun() id="modal3">
+        <div class="header_modal">
+            <div class="title">
+                Contact Me
+            </div>
+
+            <button data-close-button class="close-button">&times;</button>
+
+        </div>
+        <div class="modal_body">
+        </div>
+    </div>
+    <div id="overlay" onclick=fun()></div>
+    
 
 <script src="app.js"></script>
 </body>
