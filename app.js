@@ -49,3 +49,14 @@ function closeModal(modal){
     modal.classList.remove("active")
     overlay.classList.remove("active")
 }
+
+function sendMail(){
+    let parms = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    }
+
+    emailjs.send("service_bqb90qs", "template_99t92wb", parms).then(alert("Email Sent Thank you very much"))
+}

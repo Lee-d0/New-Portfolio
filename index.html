@@ -7,6 +7,16 @@
    
     <script src="https://kit.fontawesome.com/dca1bbaed7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "mHkzZmhsV--t46oI0",
+      });
+   })();
+</script>
 </head>
 <body >
     <div class="counter">
@@ -172,6 +182,26 @@
 
         </div>
         <div class="modal_body">
+            <form action="">
+                <div class="form_group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="form_group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="form_group">
+                    <label for="subject">subject</label>
+                    <input type="text" name="subject" id="subject" required>
+                </div>
+                <div class="form_group">
+                    <label for="message">Message</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <button type="submit" onclick="sendMail()">Send</button>
+            </form>
+
         </div>
     </div>
     <div id="overlay" onclick=fun()></div>
