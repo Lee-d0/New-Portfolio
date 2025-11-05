@@ -298,3 +298,16 @@ button{
     color: black;
     background: white;
 }
+
+@media screen and (max-width: 760px){
+     nav ul{
+    width: 400px;
+    height: 300px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    
+}
+
+}
